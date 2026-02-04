@@ -1,10 +1,13 @@
 /* global */
 @import "./global/global.css";
+@import "./global/header.css";
 
 /* utilitários */
 @import "./utilitarios/componentes.css";
 @import "./utilitarios/cores.css";
 @import "./utilitarios/tipografia.css";
+@import "./utilitarios/gameCard.css";
+@import "./utilitarios/players.css";
 
 /* Jogo da Velha */
 @import "./ticTacToe/ticTacToe.css";

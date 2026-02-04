@@ -9,3 +9,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+body {
+  background: var(--cor-background);
+}
+
+main {
+  width: 100vw;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}

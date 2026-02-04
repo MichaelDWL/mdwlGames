@@ -1,0 +1,40 @@
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px 0;
+}
+
+.game-grid i {
+  font-size: 1.5rem;
+  color: var(--cor-txt);
+}
+
+.game-item {
+  border: 2px solid var(--cor-txt);
+  padding: 3rem;
+  /* background: var(--cor-terc); */
+}
+
+.game-item:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.game-item:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.game-item:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.game-item:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.X {
+  display: none;
+}
+
+.O {
+  display: none;
+}

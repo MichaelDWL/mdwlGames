@@ -1,0 +1,11 @@
+.btn-1 {
+  background: var(--cor-prim);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+.btn-1:hover {
+  background: var(--cor-terc);
+  color: var(--cor-txt);
+  cursor: pointer;
+}

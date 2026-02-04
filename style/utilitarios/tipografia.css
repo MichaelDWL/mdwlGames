@@ -13,6 +13,12 @@
     sans-serif;
 }
 
+.font-m-bold {
+  font:
+    700 1rem/1.5 "Roboto",
+    sans-serif;
+}
+
 .font-l {
   font:
     500 1.125rem/1.5 "Roboto",

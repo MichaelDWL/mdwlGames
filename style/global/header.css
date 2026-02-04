@@ -1,0 +1,47 @@
+.header {
+  background-color: var(--cor-prim);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 1.125rem;
+}
+
+.link-games {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link-games a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.link-games a:hover {
+  color: var(--cor-sec);
+}
+
+.link-games a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: white;
+  margin-top: 4px;
+  transition: 0.3s;
+}
+
+.link-games a:hover::after,
+.link-games a.ativo::after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

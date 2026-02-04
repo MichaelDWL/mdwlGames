@@ -1,0 +1,36 @@
+.player {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 2rem;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #666;
+}
+
+.player-options {
+  display: flex;
+  padding: 0.65rem 1.125rem;
+  position: relative;
+}
+
+.player::before {
+  content: "";
+  width: 50%;
+  height: calc(100% - 8px);
+  background: #66666670;
+  position: absolute;
+  border-radius: 2rem;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.player.ativo:before {
+  transform: translateX(93%);
+}
+
+/* .link-games a:hover::after,
+.link-games a.ativo::after {
+  width: 100%;
+} */
