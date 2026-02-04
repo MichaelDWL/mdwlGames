@@ -1,4 +1,5 @@
 const gameItem = document.querySelectorAll(".game-item");
+const selectPlayer = document.querySelector(".player");
 
 let board = Array(9).fill("");
 
@@ -36,6 +37,9 @@ function checkWinner() {
 
 gameItem.forEach((item, index) => {
   item.addEventListener("click", (event) => {
+    selectPlayer.classList.toggle("ativo");
+    console.log(selectPlayer);
+
     if (board[index] !== "") return; // já clicado
 
     board[index] = player;
