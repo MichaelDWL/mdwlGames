@@ -15,11 +15,12 @@ body {
 }
 
 main {
-  width: 100vw;
+  display: flex;
+  width: 100%;
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 1.5rem;
 }
