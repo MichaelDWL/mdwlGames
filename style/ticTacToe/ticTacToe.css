@@ -1,11 +1,12 @@
 .game-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   margin: 50px 0;
+  max-width: 100%;
 }
 
 .game-grid i {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--cor-txt);
 }
 
@@ -37,4 +38,8 @@
 
 .O {
   display: none;
+}
+
+.game-ticTacToe.disabled .game-grid {
+  opacity: 80%;
 }
