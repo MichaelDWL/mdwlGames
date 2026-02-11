@@ -3,6 +3,7 @@
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   margin: 50px 0;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .game-grid i {

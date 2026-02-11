@@ -10,7 +10,6 @@ function startGame(){
 
 startGames.addEventListener("click", startGame);
 
-
 let board = Array(9).fill("");
 
 const players = {

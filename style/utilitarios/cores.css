@@ -7,12 +7,15 @@
   --cor-txt: #111;
   --cor-txt-sec: #333;
   --cor-txt-terc: white;
+  --cor-board-prim: #191a1863;
+  --cor-board-sec: #eeeed2;
 }
 
 .cor-prim {
   color: var(--cor-prim);
 }
-
+.cor-prim {
+}
 .cor-sec {
   color: var(--cor-sec);
 }

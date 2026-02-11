@@ -1,0 +1,51 @@
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, var(--chess-cell-size, 56px));
+  grid-template-rows: repeat(8, var(--chess-cell-size, 56px));
+  max-width: 100%;
+  place-content: center;
+}
+
+.chess-home {
+  display: flex;
+  width: var(--chess-cell-size, 56px);
+  height: var(--chess-cell-size, 56px);
+  min-width: var(--chess-cell-size, 56px);
+  min-height: var(--chess-cell-size, 56px);
+  padding: 0.25rem;
+  border: solid 2px black;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Casas pretas */
+.chess-home:nth-child(odd) {
+  background-color: var(--cor-board-prim);
+}
+
+/* Casas brancas */
+.chess-home:nth-child(even) {
+  background-color: var(--cor-board-sec);
+}
+
+/* Inverter cores a cada linha */
+.chess-home:nth-child(16n + 1),
+.chess-home:nth-child(16n + 3),
+.chess-home:nth-child(16n + 5),
+.chess-home:nth-child(16n + 7) {
+  background-color: var(--cor-board-sec);
+}
+
+.chess-home:nth-child(16n + 2),
+.chess-home:nth-child(16n + 4),
+.chess-home:nth-child(16n + 6),
+.chess-home:nth-child(16n + 8) {
+  background-color: var(--cor-board-prim);
+}
+
+.chess-home i {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+}
