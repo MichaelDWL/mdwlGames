@@ -1,20 +1,36 @@
+.tic-turn {
+  margin: 0.5rem 0;
+  min-height: 1.5em;
+  text-align: center;
+}
+
 .game-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-  margin: 50px 0;
+  margin: 1rem 0;
   max-width: 100%;
   cursor: pointer;
+  gap: 0;
 }
 
 .game-grid i {
-  font-size: 1rem;
+  font-size: 2rem;
   color: var(--cor-txt);
+  pointer-events: none;
 }
 
 .game-item {
-  border: 2px solid var(--cor-txt);
-  padding: 3rem;
-  /* background: var(--cor-terc); */
+  border: 2px solid var(--cor-prim);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  transition: background-color 0.2s ease;
+}
+
+.game-item:hover:not(.win-cell) {
+  background-color: var(--cor-quar, #d6e5e3);
 }
 
 .game-item:nth-child(n + 7) {
@@ -33,6 +49,10 @@
   border-right: none;
 }
 
+.game-item.win-cell {
+  background-color: rgba(127, 201, 127, 0.4);
+}
+
 .X {
   display: none;
 }
@@ -42,5 +62,71 @@
 }
 
 .game-ticTacToe.disabled .game-grid {
-  opacity: 80%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* Modal vitória / empate */
+.tic-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.tic-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tic-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.tic-modal-box {
+  position: relative;
+  background: white;
+  color: var(--cor-txt);
+  padding: 1.75rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.tic-modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--cor-prim);
+}
+
+.tic-modal-message {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--cor-txt-sec);
+}
+
+.tic-modal-btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.tic-modal-btn:hover {
+  background-color: var(--cor-terc);
+  color: var(--cor-txt);
 }

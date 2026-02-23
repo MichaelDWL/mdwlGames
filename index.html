@@ -28,56 +28,49 @@
             <div class="gameCard">
 
                 <div>
-                    <h1 class="font-l"> Jogo da velha </h1>
+                    <h1 class="font-l">Jogo da velha</h1>
                 </div>
-                <div class="player">
-                    <div class="player-options font-m-bold" data-id="1">1 Player</div>
-                    <div class="player-options font-m-bold" data-id="2">2 Players</div>
+                <div class="player ativo" id="playerMode">
+                    <div class="player-options font-m-bold" data-mode="1">1 Jogador</div>
+                    <div class="player-options font-m-bold ativo" data-mode="2">2 Jogadores</div>
                 </div>
 
-                <div class="game-ticTacToe disabled">
+                <p id="ticTurn" class="tic-turn cor-txt-sec font-m-bold" aria-live="polite">Vez de: —</p>
 
-                    <div class="game-grid">
+                <div class="game-ticTacToe disabled" id="gameTicTacToe">
+                    <div class="game-grid" id="gameGrid">
                         <div class="game-item" data-index="0">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="1">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="2">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="3">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="4">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="5">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="6">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="7">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
                         </div>
-
                         <div class="game-item" data-index="8">
                             <div class="X"><i class="fa-solid fa-xmark"></i></div>
                             <div class="O"><i class="fa-regular fa-circle"></i></div>
@@ -85,11 +78,18 @@
                     </div>
                 </div>
 
-
-
-                <button id="startGame" class="btn-1 font-s cor-txt-terc"> Iniciar jogo</button>
+                <button id="startGame" class="btn-1 font-s cor-txt-terc">Iniciar jogo</button>
             </div>
 
+            <!-- Modal de vitória / empate -->
+            <div id="ticModal" class="tic-modal" aria-hidden="true">
+                <div class="tic-modal-overlay"></div>
+                <div class="tic-modal-box">
+                    <h2 class="tic-modal-title" id="ticModalTitle">Vitória!</h2>
+                    <p id="ticModalMessage" class="tic-modal-message"></p>
+                    <button type="button" id="ticModalBtn" class="tic-modal-btn btn-1 font-s cor-txt-terc">Jogar novamente</button>
+                </div>
+            </div>
         </div>
     </main>
 
