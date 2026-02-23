@@ -26,6 +26,7 @@
     <main>
         <div class="container">
             <div class="gameCard">
+                <p id="chess-turn" class="cor-txt-sec font-m-bold">Brancas</p>
                 <div class="chess-board">
                     <div class="chess-home" data-index="8a"><i class="fa-solid fa-chess-rook"></i></div>
                     <div class="chess-home" data-index="8b"><i class="fa-solid fa-chess-knight"></i></div>
@@ -94,9 +95,18 @@
                 </div>
             </div>
         </div>
+        <!-- Modal de vitória -->
+        <div id="chess-modal" class="chess-modal" aria-hidden="true">
+            <div class="chess-modal-overlay"></div>
+            <div class="chess-modal-box">
+                <h2 class="chess-modal-title">Vitória!</h2>
+                <p id="chess-modal-message" class="chess-modal-message"></p>
+                <button type="button" id="chess-modal-btn" class="chess-modal-btn">Jogar novamente</button>
+            </div>
+        </div>
     </main>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/chess.js"></script>
 </body>
 
 </html>

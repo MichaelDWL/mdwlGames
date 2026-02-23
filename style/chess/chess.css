@@ -49,3 +49,102 @@
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;
 }
+
+.chess-home.selected {
+  background-color: var(--cor-board-destaque, #7fc97f) !important;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.chess-home.valid-move {
+  position: relative;
+}
+
+.chess-home.valid-move::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(0, 128, 0, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.chess-home.valid-move:not(:empty)::after {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(200, 0, 0, 0.35);
+  border-radius: 0;
+}
+
+#chess-turn {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Modal de vitória */
+.chess-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.chess-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chess-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.chess-modal-box {
+  position: relative;
+  background: var(--cor-board-sec, #eeeed2);
+  color: var(--cor-txt, #111);
+  padding: 1.75rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.chess-modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--cor-prim, #424874);
+}
+
+.chess-modal-message {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.chess-modal-btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-txt-terc, white);
+  background-color: var(--cor-prim, #424874);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chess-modal-btn:hover {
+  background-color: var(--cor-terc, #a6b1e1);
+  color: var(--cor-txt, #111);
+}
